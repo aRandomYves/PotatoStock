@@ -91,6 +91,11 @@ h1 {
     corner-shape: squircle;
 }
 
+.zero {
+    background-color: var(--primary-100);
+    opacity: 75%;
+}
+
 .article-header {
     display: flex;
     align-items: baseline;

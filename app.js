@@ -1,4 +1,4 @@
-// b.5
+// b.6
 
 let items = JSON.parse(localStorage.getItem("items")) || [
   { name: "Kartoffeln", amount: 0 },
@@ -15,7 +15,7 @@ function render() {
 
   items.forEach((item, i) => {
     let stockArticle = document.createElement("article");
-    stockArticle.classList = "article-wrapper";
+    stockArticle.classList = `article-wrapper ${item.amount === 0 ? "zero" : ""}`;
 
     let stockHeader = document.createElement("article");
     stockHeader.classList = "article-header";
