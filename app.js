@@ -1,4 +1,4 @@
-// b.2
+// b.3
 
 let items = JSON.parse(localStorage.getItem("items")) || [
   { name: "Kartoffeln", amount: 0 },
@@ -42,14 +42,14 @@ function render() {
 }
 
 function plus(i) {
-  items[i].amount++;
+  items[i].amount += 0.5;
   save();
   render();
 }
 
 function minus(i) {
   if (items[i].amount > 0) {
-    items[i].amount--;
+    items[i].amount -= 0.5;
   }
   save();
   render();
@@ -60,7 +60,7 @@ function addItem() {
 
   items.push({
     name: name,
-    amount: 0,
+    amount: 1,
   });
 
   save();
