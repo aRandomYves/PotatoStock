@@ -1,0 +1,103 @@
+:root {
+
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+
+    --primary-50: #e9fcee;
+    --primary-100: #d3f8dd;
+    --primary-200: #a6f2bc;
+    --primary-300: #7aeb9a;
+    --primary-400: #4ee478;
+    --primary-500: #21de57;
+    --primary-600: #1bb145;
+    --primary-700: #148534;
+    --primary-800: #0d5923;
+    --primary-900: #072c11;
+    --primary-950: #031609;
+
+    --secondary-50: #f6e7fe;
+    --secondary-100: #eccefd;
+    --secondary-200: #da9efa;
+    --secondary-300: #c76df8;
+    --secondary-400: #b53cf6;
+    --secondary-500: #a20bf4;
+    --secondary-600: #8209c3;
+    --secondary-700: #610792;
+    --secondary-800: #410561;
+    --secondary-900: #200231;
+    --secondary-950: #100118;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.article-wrapper {
+    background-color: var(--primary-200);
+    width: 95vw;
+    border-radius: 1.5rem;
+    corner-shape: squircle;
+}
+
+.article-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.article-header h2 {
+    flex: 1;
+}
+
+.article-header h3 {
+    flex: 0 2rem;
+}
+
+.article-actions {
+    display: flex;
+    gap: .5rem;
+    padding: 0 1rem;
+}
+
+.article-actions button {
+    background-color: var(--secondary-200);
+    color: var(--secondary-600);
+    font-size: 1.5rem;
+    border: none;
+    min-height: 2rem;
+    border-radius: 1rem;
+    corner-shape: squircle;
+    margin-bottom: 1rem;
+}

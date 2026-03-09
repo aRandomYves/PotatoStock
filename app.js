@@ -1,4 +1,4 @@
-// b.3
+// b.4
 
 let items = JSON.parse(localStorage.getItem("items")) || [
   { name: "Kartoffeln", amount: 0 },
@@ -14,30 +14,47 @@ function render() {
   list.innerHTML = "";
 
   items.forEach((item, i) => {
-    let li = document.createElement("li");
+    let stockArticle = document.createElement("article");
+    stockArticle.classList = "article-wrapper";
 
-    let name = document.createTextNode(`${item.name} `);
-    let number = document.createTextNode(`(${item.amount}) `);
+    let stockHeader = document.createElement("article");
+    stockHeader.classList = "article-header";
+
+    let stockActions = document.createElement("article");
+    stockActions.classList = "article-actions";
+
+    let name = document.createElement("h2");
+    name.textContent = item.name;
+    let number = document.createElement("h3");
+    number.textContent = item.amount;
 
     let increaseItem = document.createElement("button");
-    increaseItem.textContent = "+";
+    increaseItem.className = "material-icons";
+    increaseItem.textContent = "keyboard_arrow_up";
     increaseItem.onclick = () => plus(i);
 
     let reduceItem = document.createElement("button");
-    reduceItem.textContent = "-";
+    reduceItem.classList = "material-icons";
+    reduceItem.textContent = "keyboard_arrow_down";
     reduceItem.onclick = () => minus(i);
 
     let deleteItem = document.createElement("button");
+    deleteItem.classList = "material-icons";
     deleteItem.textContent = "delete";
     deleteItem.onclick = () => deleteItemFnc(i);
 
-    li.append(name);
-    li.append(number);
-    li.append(increaseItem);
-    li.append(reduceItem);
-    li.append(deleteItem);
+    stockHeader.append(name);
+    stockHeader.append(number);
 
-    list.appendChild(li);
+    let lstArticelBody = [increaseItem, reduceItem, deleteItem];
+    lstArticelBody.forEach((e) => {
+      stockActions.append(e);
+    });
+
+    stockArticle.append(stockHeader);
+    stockArticle.append(stockActions);
+
+    list.appendChild(stockArticle);
   });
 }
 
