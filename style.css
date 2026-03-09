@@ -54,6 +54,27 @@ body {
     padding: 0;
     margin: 0;
     width: 100vw;
+    font-family: "Inter", sans-serif;
+    touch-action: manipulation;
+}
+
+h1 {
+    margin-left: 1rem;
+}
+
+.inp {
+    font-size: 1.5rem;
+    border: none;
+    min-height: 2rem;
+    border-radius: 1rem;
+    corner-shape: squircle;
+}
+
+.txt {
+    border: 2px solid var(--background-400);
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
 }
 
 #list {
@@ -94,10 +115,17 @@ body {
 .article-actions button {
     background-color: var(--secondary-200);
     color: var(--secondary-600);
-    font-size: 1.5rem;
-    border: none;
-    min-height: 2rem;
-    border-radius: 1rem;
-    corner-shape: squircle;
     margin-bottom: 1rem;
+}
+
+.add-item-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin-top: 1rem;
+}
+
+.add-item-wrapper input {
+    flex: 1;
 }

@@ -1,4 +1,4 @@
-// b.4
+// b.5
 
 let items = JSON.parse(localStorage.getItem("items")) || [
   { name: "Kartoffeln", amount: 0 },
@@ -29,17 +29,17 @@ function render() {
     number.textContent = item.amount;
 
     let increaseItem = document.createElement("button");
-    increaseItem.className = "material-icons";
+    increaseItem.className = "material-icons inp";
     increaseItem.textContent = "keyboard_arrow_up";
     increaseItem.onclick = () => plus(i);
 
     let reduceItem = document.createElement("button");
-    reduceItem.classList = "material-icons";
+    reduceItem.classList = "material-icons inp";
     reduceItem.textContent = "keyboard_arrow_down";
     reduceItem.onclick = () => minus(i);
 
     let deleteItem = document.createElement("button");
-    deleteItem.classList = "material-icons";
+    deleteItem.classList = "material-icons inp";
     deleteItem.textContent = "delete";
     deleteItem.onclick = () => deleteItemFnc(i);
 
