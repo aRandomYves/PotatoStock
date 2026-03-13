@@ -1,4 +1,4 @@
-// b.7
+// b.8
 
 let items = JSON.parse(localStorage.getItem("items")) || [
   { name: "Kartoffeln", amount: 0 },
